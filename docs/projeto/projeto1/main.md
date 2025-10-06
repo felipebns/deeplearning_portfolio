@@ -83,7 +83,7 @@ plt.ylabel("Porcentagem")
 plt.show()
 ```
 
-![equilibrio](equilibrio.png)
+![equilibrio](equilibrio.jpeg)
 
 ### Preenchendo valores vazios
 
@@ -136,9 +136,9 @@ target_col = "satisfaction"
 plot_distributions(df, quantitative_cols, ordinal_cols, nominal_cols, title_suffix="(Original)", force_ordinal_continuous=False)
 ```
 
-![quant_semnorm](quant_semnorm.png)
-![ord_semnorm](ord_semnorm.png)
-![nominais_semnorm](nominais_semnorm.png)
+![quant_semnorm](quant_semnorm.jpeg)
+![ord_semnorm](ord_semnorm.jpeg)
+![nominais_semnorm](nominais_semnorm.jpeg)
 
 Pelas distribuições apresentadas, as variáveis categóricas estão relativamente balanceadas em alguns aspectos, mas apresentam diferenças relevantes em outros. O gênero está equilibrado entre homens e mulheres. Já o tipo de cliente é bastante desbalanceado, com predominância de clientes leais. No tipo de viagem, há mais viagens de negócios do que pessoais. Em relação à classe, as categorias Business e Eco têm proporções próximas, enquanto Eco Plus aparece em bem menor quantidade. A variável de satisfação também é relativamente balanceada, com uma leve maioria de clientes insatisfeitos ou neutros.
 
@@ -229,8 +229,8 @@ plot_distributions(
 )
 ```
 
-![quant_comnorm](quant_comnorm.png)
-![ord_comnorm](ord_comnorm.png)
+![quant_comnorm](quant_comnorm.jpeg)
+![ord_comnorm](ord_comnorm.jpeg)
 
 # 4. Implementação MLP
 
@@ -604,8 +604,6 @@ Treinamento encerrado no epoch 27 (convergência detectada).
 preds_test = model.test(X_test)
 ```
 
-# VALIDATION ????????
-
 # 7. Curva de erro e visualização
 
 ### Extraindo dados para avaliar modelo:
@@ -653,15 +651,15 @@ Camada 1:
 
 ### Matriz de confusão:
 
-![confusao](confusao.png)
+![confusao](confusao.jpeg)
 
 ### Curva ROC
 
-![roc](roc.png)
+![roc](roc.jpeg)
 
 ### Loss VS Epoch / Accuracy VS Epoch
 
-![epochs](epochs.png)
+![epochs](epochs.jpeg)
 
 Podemos observar uma clara convergência por essa imagem ainda, platou após 15 epochs aproxidamente.
 
