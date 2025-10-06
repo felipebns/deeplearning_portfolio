@@ -6,7 +6,7 @@
 - Victor Soares
 
 ### Nota: 
-- O cógido foi feito considerando um arquivo auxiliar mlp e um outro utils. Aquele possui a implementação completa da mlp e este funções auxiliares que ajudam na organização
+- O cógido foi feito considerando um arquivo auxiliar mlp.py e um outro utils.py. Aquele possui a implementação completa da mlp e este funções auxiliares que ajudam na organização
 
 # 1.    Data set - Seleção
 
@@ -95,7 +95,7 @@ print(df.columns[df.isnull().any()]) #observa-se colunas com valores faltando!
 Index(['Arrival Delay in Minutes'], dtype='object')
 ```
 
-### Arrival delay é numérica, utilizaremos a moda para preencher o valor, já que se arrival delay está como null, provavelmente foi 0 e esqueceram de colocar
+### A variável Arrival Delay é numérica. Para tratar os valores ausentes nessa coluna, o grupo considerou que a ausência de registros poderia estar relacionada a um esquecimento por parte da tripulação ou da companhia aérea ao preencher o dado, possivelmente por não ter havido atraso. Caso um atraso tivesse ocorrido, o preenchimento dessa informação seria mais relevante e, portanto, menos provável de ser omitido. Assim, optou-se por substituir os valores ausentes por zero, que, além de representar a ausência de atraso, corresponde também à moda da variável.
 
 ```python
 df['Arrival Delay in Minutes'] = df['Arrival Delay in Minutes'].fillna(df['Arrival Delay in Minutes'].mode()[0])
